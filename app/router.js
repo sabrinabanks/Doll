@@ -7,4 +7,10 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('dolls', {path:'/'}, function() {
+  this.route('doll', { path: ':slug'}, function() {
+        this.route('items');
+        this.route('bio')
+      });
+  });
 });
