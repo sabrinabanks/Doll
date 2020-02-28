@@ -1,0 +1,25 @@
+<div class="grid grid-cols-4 grid-rows-1 gap-4">
+
+  <div class="row-end-2 col-start-1 col-span-4 border-double border-8 border-purple-300 m-6 rounded overflow-hidden shadow-lg">
+
+    <div class=" grid grid-cols-2 grid-rows-1 gap-4">
+<img class="col-span-1 mb-8" src={{this.model.propic}} alt="doll picture" />
+             
+            <div class="px-6 py-4 flex flex-col justify-between "> 
+                <LinkTo class="font-bold text-white bg-purple-500 rounded text-3xl text-center mb-2" 
+                @route="dolls.doll.bio" 
+                @model={{this.model.slug}}>
+                    I'm {{this.model.name}}!
+                </LinkTo>
+                <p class="text-gray-700 text-base">
+                    {{outlet}}
+                </p>
+            <LinkTo class="font-bold text-white bg-purple-500 rounded text-3xl text-center bg-purple-300 hover:bg-purple-700 text-white font-bold rounded" 
+                @route="dolls.doll.items" 
+                @model={{this.model.slug}}>
+                    Items 
+                </LinkTo> 
+            </div>
+        </div>
+    </div>
+</div>
